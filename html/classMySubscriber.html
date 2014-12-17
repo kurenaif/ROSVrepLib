@@ -99,12 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48c3a49953cd13c3487873aaee7fc8b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMySubscriber.html#a48c3a49953cd13c3487873aaee7fc8b2">callback</a> (const typename T::ConstPtr &amp;msg)</td></tr>
 <tr class="memdesc:a48c3a49953cd13c3487873aaee7fc8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback関数. 外向けのものではない  <a href="#a48c3a49953cd13c3487873aaee7fc8b2">More...</a><br/></td></tr>
 <tr class="separator:a48c3a49953cd13c3487873aaee7fc8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e5c6dbe7de099a13a86cdad5351a22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMySubscriber.html#ab7e5c6dbe7de099a13a86cdad5351a22">MySubscriber</a> (ros::NodeHandle *node, std::string topicName, int queue_size=1)</td></tr>
-<tr class="memdesc:ab7e5c6dbe7de099a13a86cdad5351a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriberを制作する.  <a href="#ab7e5c6dbe7de099a13a86cdad5351a22">More...</a><br/></td></tr>
-<tr class="separator:ab7e5c6dbe7de099a13a86cdad5351a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa2f38fd53ae13c34a847633d68ee01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMySubscriber.html#a9aa2f38fd53ae13c34a847633d68ee01">MySubscriber</a> (<a class="el" href="classMyROS.html">MyROS</a> *ros, std::string topicName, int queue_size=1)</td></tr>
-<tr class="memdesc:a9aa2f38fd53ae13c34a847633d68ee01"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriberを制作する  <a href="#a9aa2f38fd53ae13c34a847633d68ee01">More...</a><br/></td></tr>
-<tr class="separator:a9aa2f38fd53ae13c34a847633d68ee01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab072d202da8fd343997a320b671fba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMySubscriber.html#a6ab072d202da8fd343997a320b671fba">MySubscriber</a> (ros::NodeHandle *node, const std::string &amp;topicName, const int queue_size=1)</td></tr>
+<tr class="memdesc:a6ab072d202da8fd343997a320b671fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriberを制作する.  <a href="#a6ab072d202da8fd343997a320b671fba">More...</a><br/></td></tr>
+<tr class="separator:a6ab072d202da8fd343997a320b671fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72254fd18a242511f018f0cb47fb8493"><td class="memTemplParams" colspan="2">template&lt;class U &gt; </td></tr>
 <tr class="memitem:a72254fd18a242511f018f0cb47fb8493"><td class="memTemplItemLeft" align="right" valign="top">U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMySubscriber.html#a72254fd18a242511f018f0cb47fb8493">Get</a> ()</td></tr>
 <tr class="memdesc:a72254fd18a242511f018f0cb47fb8493"><td class="mdescLeft">&#160;</td><td class="mdescRight">取得している値を返す  <a href="#a72254fd18a242511f018f0cb47fb8493">More...</a><br/></td></tr>
@@ -132,11 +129,11 @@ class MySubscriber&lt; T &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab7e5c6dbe7de099a13a86cdad5351a22"></a>
+<a class="anchor" id="a6ab072d202da8fd343997a320b671fba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -150,13 +147,13 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>topicName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>queue_size</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -184,64 +181,12 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a9aa2f38fd53ae13c34a847633d68ee01"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classMySubscriber.html">MySubscriber</a>&lt; T &gt;::<a class="el" href="classMySubscriber.html">MySubscriber</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classMyROS.html">MyROS</a> *&#160;</td>
-          <td class="paramname"><em>ros</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>topicName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>queue_size</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>subscriberを制作する </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ros</td><td>MyROSオブジェクト </td></tr>
-    <tr><td class="paramname">topicName</td><td>topicの名前 </td></tr>
-    <tr><td class="paramname">queue_size</td><td>queueのサイズ </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a48c3a49953cd13c3487873aaee7fc8b2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -275,7 +220,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
 <div class="memtemplate">
 template&lt;class U &gt; </div>
 <table class="mlabels">
@@ -311,7 +256,7 @@ template&lt;class U &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -339,7 +284,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -375,7 +320,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 17 2014 12:51:33 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 17 2014 17:00:39 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

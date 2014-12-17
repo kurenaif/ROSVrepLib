@@ -7,10 +7,10 @@
 
 var indexSectionsWithContent =
 {
-  0: "cgimopr",
+  0: "cegilmoprs",
   1: "m",
   2: "m",
-  3: "cgimopr",
+  3: "cegilmoprs",
   4: "r"
 };
 

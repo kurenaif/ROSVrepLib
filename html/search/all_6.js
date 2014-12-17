@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme',['README',['../md_README.html',1,'']]],
-  ['run',['Run',['../classMyROS.html#a3d02355a40459662ab08fff297dcd158',1,'MyROS']]]
+  ['operator_3c_3c',['operator&lt;&lt;',['../classMyPublisher.html#a8b0d70721eb56b66cc00ce7bd192e76c',1,'MyPublisher']]]
 ];

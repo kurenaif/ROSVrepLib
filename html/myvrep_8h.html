@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>My Project: Class Index</title>
+<title>My Project: myvrep.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,8 +38,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,12 +60,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li class="current"><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,21 +77,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Class Index</div>  </div>
+<div class="title">myvrep.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_M">M</a></div>
-<table style="margin: 10px; white-space: nowrap;" align="center" width="95%" border="0" cellspacing="0" cellpadding="0">
-<tr><td rowspan="2" valign="bottom"><a name="letter_M"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;M&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="classMyROS.html">MyROS</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classMyVrep.html">MyVrep</a>&#160;&#160;&#160;</td></tr>
-<tr><td valign="top"><a class="el" href="classMySubscriber.html">MySubscriber</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td valign="top"><a class="el" href="classMyPublisher.html">MyPublisher</a>&#160;&#160;&#160;</td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td></tr>
+
+<p>VrepとROSノードをつなぐためのライブラリ  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="myros_8h_source.html">myros.h</a>&quot;</code><br/>
+<code>#include &lt;vrep_common/VrepInfo.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosGetObjectHandle.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosLoadModel.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosRemoveModel.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosStartSimulation.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosStopSimulation.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosEnablePublisher.h&gt;</code><br/>
+<code>#include &lt;vrep_common/simRosEnableSubscriber.h&gt;</code><br/>
+</div>
+<p><a href="myvrep_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMyVrep.html">MyVrep</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<div class="qindex"><a class="qindex" href="#letter_M">M</a></div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>VrepとROSノードをつなぐためのライブラリ </p>
+<dl class="section author"><dt>Author</dt><dd>kurenaif </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2014-12-17 </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Wed Dec 17 2014 17:00:39 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
