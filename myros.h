@@ -9,7 +9,6 @@
 
 #include <memory>
 #include <ros/ros.h>
-#include <std_msgs/Int64.h>
 #include <string>
 
 template<typename T, typename... Args>
@@ -36,9 +35,9 @@ class MyROS
 		 * @param nodeName nodeの名前
 		 * @param loopRate sleepさせる時間
 		 */
-	MyROS(int argc, char** argv, std::string nodeName, int loopRate=10){
+	MyROS(int argc, char** argv, const std::string &nodeName, const int loopRate=10){
 		ros::init(argc, argv, nodeName);
-		m_node = make_unique<ros::NodeHandle>();
+		m_node = make_unique<ros::NodeHandle>("~");
 		m_loopRate = make_unique<ros::Rate>(loopRate);
 
 		ros::Time::init();
@@ -95,17 +94,8 @@ class MySubscriber
 		 * @param topicNama topicの名前
 		 * @param queue_size queueのサイズ
 		 */
-		MySubscriber(ros::NodeHandle *node, std::string topicName, int queue_size=1):m_sub(node->subscribe(topicName, queue_size, &MySubscriber::callback, this)){}
-		/**
-		 * @brief subscriberを制作する
-		 *
-		 * @param ros MyROSオブジェクト
-		 * @param topicName topicの名前
-		 * @param queue_size queueのサイズ
-		 */
-		MySubscriber(MyROS *ros, std::string topicName, int queue_size=1){
-			MySubscriber(ros->GetNodeHandlePointer(), topicName, queue_size);
-		}
+		MySubscriber(ros::NodeHandle *node, const std::string& topicName, const int queue_size=1):m_sub(node->subscribe(topicName, queue_size, &MySubscriber::callback, this)){}
+
 
 		/**
 		 * @brief 取得している値を返す
@@ -165,9 +155,7 @@ class MyPublisher
 		 * @param queue_size queueのサイズ
 		 */
 		MyPublisher(ros::NodeHandle *node, std::string topicName, int queue_size=1):m_pub(node->advertise<T>(topicName,1)){}
-		MyPublisher(MyROS *ros, std::string topicName, int queue_size=1){
-			MyPublisher(ros->GetNodeHandlePointer(), topicName, queue_size);
-		}
+
 
 		/**
 		 * @brief 値をpublishする
