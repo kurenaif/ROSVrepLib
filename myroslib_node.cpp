@@ -4,7 +4,7 @@
 #include <std_msgs/Int64.h>
 #include <string>
 
-#include "MyROS.h"
+#include "myros.h"
 
 int main(int argc, char** argv)
 {

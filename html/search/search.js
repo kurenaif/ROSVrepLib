@@ -10,7 +10,8 @@ var indexSectionsWithContent =
   0: "cgimopr",
   1: "m",
   2: "m",
-  3: "cgimopr"
+  3: "cgimopr",
+  4: "r"
 };
 
 var indexSectionNames =
@@ -18,7 +19,8 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "files",
-  3: "functions"
+  3: "functions",
+  4: "pages"
 };
 
 function convertToId(search)

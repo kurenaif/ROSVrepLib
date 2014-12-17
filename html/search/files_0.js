@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['myros_2eh',['MyROS.h',['../MyROS_8h.html',1,'']]]
+  ['myros_2eh',['myros.h',['../myros_8h.html',1,'']]]
 ];
