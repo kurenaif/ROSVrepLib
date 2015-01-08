@@ -1,0 +1,140 @@
+\hypertarget{classMySubscriber}{\section{My\-Subscriber$<$ T $>$ Class Template Reference}
+\label{classMySubscriber}\index{My\-Subscriber$<$ T $>$@{My\-Subscriber$<$ T $>$}}
+}
+
+
+Subscriberオブジェクト  
+
+
+
+
+{\ttfamily \#include $<$myros.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMySubscriber_a48c3a49953cd13c3487873aaee7fc8b2}{callback} (const typename T\-::\-Const\-Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em callback関数. 外向けのものではない \end{DoxyCompactList}\item 
+\hyperlink{classMySubscriber_a6ab072d202da8fd343997a320b671fba}{My\-Subscriber} (ros\-::\-Node\-Handle $\ast$node, const std\-::string \&topic\-Name, const int queue\-\_\-size=1)
+\begin{DoxyCompactList}\small\item\em subscriberを制作する. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\U \hyperlink{classMySubscriber_a72254fd18a242511f018f0cb47fb8493}{Get} ()
+\begin{DoxyCompactList}\small\item\em 取得している値を返す \end{DoxyCompactList}\item 
+T \hyperlink{classMySubscriber_a360ba8202d5c72d225925ed6188052be}{Get} ()
+\begin{DoxyCompactList}\small\item\em 取得している値を返す \end{DoxyCompactList}\item 
+bool \hyperlink{classMySubscriber_ab6fa45cf088da2b7b47530d49d203ccb}{Is\-New} ()
+\begin{DoxyCompactList}\small\item\em 前回の\-Get()から更新があったかどうか \end{DoxyCompactList}\item 
+\hypertarget{classMySubscriber_a61d722cf8524700d9979280c4a0308ef}{{\footnotesize template$<$class U $>$ }\\void {\bfseries operator$>$$>$} (U \&dst)}\label{classMySubscriber_a61d722cf8524700d9979280c4a0308ef}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class My\-Subscriber$<$ T $>$}
+
+Subscriberオブジェクト 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Subscribeする肩 \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMySubscriber_a6ab072d202da8fd343997a320b671fba}{\index{My\-Subscriber@{My\-Subscriber}!My\-Subscriber@{My\-Subscriber}}
+\index{My\-Subscriber@{My\-Subscriber}!MySubscriber@{My\-Subscriber}}
+\subsubsection[{My\-Subscriber}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf My\-Subscriber}$<$ T $>$\-::{\bf My\-Subscriber} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle $\ast$}]{node, }
+\item[{const std\-::string \&}]{topic\-Name, }
+\item[{const int}]{queue\-\_\-size = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMySubscriber_a6ab072d202da8fd343997a320b671fba}
+
+
+subscriberを制作する. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & subscribeするnode \\
+\hline
+{\em topic\-Nama} & topicの名前 \\
+\hline
+{\em queue\-\_\-size} & queueのサイズ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMySubscriber_a48c3a49953cd13c3487873aaee7fc8b2}{\index{My\-Subscriber@{My\-Subscriber}!callback@{callback}}
+\index{callback@{callback}!MySubscriber@{My\-Subscriber}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf My\-Subscriber}$<$ T $>$\-::callback (
+\begin{DoxyParamCaption}
+\item[{const typename T\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMySubscriber_a48c3a49953cd13c3487873aaee7fc8b2}
+
+
+callback関数. 外向けのものではない 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & callbackされてくるmessage \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMySubscriber_a72254fd18a242511f018f0cb47fb8493}{\index{My\-Subscriber@{My\-Subscriber}!Get@{Get}}
+\index{Get@{Get}!MySubscriber@{My\-Subscriber}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class U $>$ U {\bf My\-Subscriber}$<$ T $>$\-::Get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMySubscriber_a72254fd18a242511f018f0cb47fb8493}
+
+
+取得している値を返す 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & 変換してほしい型の名前(不可能な場合, コンパイルエラー)\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+取得している値 
+\end{DoxyReturn}
+\hypertarget{classMySubscriber_a360ba8202d5c72d225925ed6188052be}{\index{My\-Subscriber@{My\-Subscriber}!Get@{Get}}
+\index{Get@{Get}!MySubscriber@{My\-Subscriber}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf My\-Subscriber}$<$ T $>$\-::Get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMySubscriber_a360ba8202d5c72d225925ed6188052be}
+
+
+取得している値を返す 
+
+\begin{DoxyReturn}{Returns}
+取得している値(内部dataではなく, まるまる全てを返すので注意) 
+\end{DoxyReturn}
+\hypertarget{classMySubscriber_ab6fa45cf088da2b7b47530d49d203ccb}{\index{My\-Subscriber@{My\-Subscriber}!Is\-New@{Is\-New}}
+\index{Is\-New@{Is\-New}!MySubscriber@{My\-Subscriber}}
+\subsubsection[{Is\-New}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf My\-Subscriber}$<$ T $>$\-::Is\-New (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMySubscriber_ab6fa45cf088da2b7b47530d49d203ccb}
+
+
+前回の\-Get()から更新があったかどうか 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 更新があった \\
+\hline
+{\em false} & 更新がなかった \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{myros_8h}{myros.\-h}\end{DoxyCompactItemize}

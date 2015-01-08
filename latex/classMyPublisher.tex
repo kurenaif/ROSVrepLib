@@ -1,0 +1,124 @@
+\hypertarget{classMyPublisher}{\section{My\-Publisher$<$ T $>$ Class Template Reference}
+\label{classMyPublisher}\index{My\-Publisher$<$ T $>$@{My\-Publisher$<$ T $>$}}
+}
+
+
+Publisherオブジェクト  
+
+
+
+
+{\ttfamily \#include $<$myros.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMyPublisher_a3ce5354492470a4f3147d52826014815}{My\-Publisher} (ros\-::\-Node\-Handle $\ast$node, std\-::string topic\-Name, int queue\-\_\-size=1)
+\begin{DoxyCompactList}\small\item\em Publisherを準備する \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\void \hyperlink{classMyPublisher_a429cb336dc3423784854cf5b8bb10883}{Push} (U value)
+\begin{DoxyCompactList}\small\item\em 値をpublishする \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classMyPublisher_ac3746c9df0fd15b945acd7880c5fbc94}{Get\-Topic\-Name} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ時に設定したtopicの名前を取得する(Subscribeにでもどうぞ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\void \hyperlink{classMyPublisher_a8b0d70721eb56b66cc00ce7bd192e76c}{operator$<$$<$} (U value)
+\begin{DoxyCompactList}\small\item\em .Pushする \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class My\-Publisher$<$ T $>$}
+
+Publisherオブジェクト 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & publishする型の名前 \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMyPublisher_a3ce5354492470a4f3147d52826014815}{\index{My\-Publisher@{My\-Publisher}!My\-Publisher@{My\-Publisher}}
+\index{My\-Publisher@{My\-Publisher}!MyPublisher@{My\-Publisher}}
+\subsubsection[{My\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf My\-Publisher}$<$ T $>$\-::{\bf My\-Publisher} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle $\ast$}]{node, }
+\item[{std\-::string}]{topic\-Name, }
+\item[{int}]{queue\-\_\-size = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyPublisher_a3ce5354492470a4f3147d52826014815}
+
+
+Publisherを準備する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & 準備するnodeの名前 \\
+\hline
+{\em topic\-Name} & topicの名前 \\
+\hline
+{\em queue\-\_\-size} & queueのサイズ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMyPublisher_ac3746c9df0fd15b945acd7880c5fbc94}{\index{My\-Publisher@{My\-Publisher}!Get\-Topic\-Name@{Get\-Topic\-Name}}
+\index{Get\-Topic\-Name@{Get\-Topic\-Name}!MyPublisher@{My\-Publisher}}
+\subsubsection[{Get\-Topic\-Name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std\-::string {\bf My\-Publisher}$<$ T $>$\-::Get\-Topic\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyPublisher_ac3746c9df0fd15b945acd7880c5fbc94}
+
+
+コンストラクタ時に設定したtopicの名前を取得する(Subscribeにでもどうぞ) 
+
+\begin{DoxyReturn}{Returns}
+topicの名前 
+\end{DoxyReturn}
+\hypertarget{classMyPublisher_a8b0d70721eb56b66cc00ce7bd192e76c}{\index{My\-Publisher@{My\-Publisher}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!MyPublisher@{My\-Publisher}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ template$<$class U $>$ void {\bf My\-Publisher}$<$ T $>$\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{U}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyPublisher_a8b0d70721eb56b66cc00ce7bd192e76c}
+
+
+.Pushする 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & pushする型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & pushする値 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMyPublisher_a429cb336dc3423784854cf5b8bb10883}{\index{My\-Publisher@{My\-Publisher}!Push@{Push}}
+\index{Push@{Push}!MyPublisher@{My\-Publisher}}
+\subsubsection[{Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ template$<$class U $>$ void {\bf My\-Publisher}$<$ T $>$\-::Push (
+\begin{DoxyParamCaption}
+\item[{U}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyPublisher_a429cb336dc3423784854cf5b8bb10883}
+
+
+値をpublishする 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & publishする型(T.\-dataに変換できなければコンパイルエラ-\/) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & publishする値 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{myros_8h}{myros.\-h}\end{DoxyCompactItemize}
