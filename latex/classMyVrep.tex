@@ -1,0 +1,237 @@
+\hypertarget{classMyVrep}{\section{My\-Vrep Class Reference}
+\label{classMyVrep}\index{My\-Vrep@{My\-Vrep}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMyVrep_ad04ad612d83dea285cfcc994d5904849}{My\-Vrep} (ros\-::\-Node\-Handle $\ast$node)
+\begin{DoxyCompactList}\small\item\em コンストラクタ, 名前空間とinfocallbackのスタンバイ \end{DoxyCompactList}\item 
+float \hyperlink{classMyVrep_a301856627257f56ea4dc62f40cd53505}{Get\-Time} ()
+\begin{DoxyCompactList}\small\item\em 取得した時間を返す \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_a24aa7c4b24ff512a366b0a0cdacdc867}{Is\-Run} ()
+\begin{DoxyCompactList}\small\item\em Vrepがいま動いているかどうかを返す \end{DoxyCompactList}\item 
+int \hyperlink{classMyVrep_a0c2040190b0326acba9ef14ce74a5d6f}{Get\-Object\-Handle} (std\-::string object\-Name)
+\begin{DoxyCompactList}\small\item\em Objectの\-Handleを取得する \end{DoxyCompactList}\item 
+void \hyperlink{classMyVrep_a0f2e523e6a68bde936c224b83d60af66}{Load\-Model} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Modelを読み込む \end{DoxyCompactList}\item 
+void \hyperlink{classMyVrep_add24917b44a09b75496d76d8cda107af}{Remove\-Model} (int handle)
+\begin{DoxyCompactList}\small\item\em Modelを除去する \end{DoxyCompactList}\item 
+void \hyperlink{classMyVrep_ae9f091cd4ea81eb42d564ccb3de6d034}{Remove\-Model} (std\-::string model\-Name)
+\begin{DoxyCompactList}\small\item\em Modelを除去する \end{DoxyCompactList}\item 
+\hypertarget{classMyVrep_a8e56cc5f090220b30c27ead7d0484e49}{void \hyperlink{classMyVrep_a8e56cc5f090220b30c27ead7d0484e49}{Start} ()}\label{classMyVrep_a8e56cc5f090220b30c27ead7d0484e49}
+
+\begin{DoxyCompactList}\small\item\em Vrepを\-Runさせる \end{DoxyCompactList}\item 
+\hypertarget{classMyVrep_a387d7d9d10e95262e702ca4ff359ce43}{void \hyperlink{classMyVrep_a387d7d9d10e95262e702ca4ff359ce43}{Stop} ()}\label{classMyVrep_a387d7d9d10e95262e702ca4ff359ce43}
+
+\begin{DoxyCompactList}\small\item\em Vrepを止める \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_a8061008dfc3351fdafe0fb3358fb9388}{Enable\-Publisher} (std\-::string topic\-Name, int queue\-Size, int stream\-Cmd, int aux\-Int1, int aux\-Int2, std\-::string aux\-String)
+\begin{DoxyCompactList}\small\item\em Vrep上のオブジェクトに対し, Publisherを要求する \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_a734773fc7f7d689c40b5b37c52b3a6fd}{Enable\-Subscriber} (std\-::string topic\-Name, int queue\-Size, int stream\-Cmd, int aux\-Int1, int aux\-Int2, std\-::string aux\-String)
+\begin{DoxyCompactList}\small\item\em Subscriberを要求する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMyVrep_ad04ad612d83dea285cfcc994d5904849}{\index{My\-Vrep@{My\-Vrep}!My\-Vrep@{My\-Vrep}}
+\index{My\-Vrep@{My\-Vrep}!MyVrep@{My\-Vrep}}
+\subsubsection[{My\-Vrep}]{\setlength{\rightskip}{0pt plus 5cm}My\-Vrep\-::\-My\-Vrep (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_ad04ad612d83dea285cfcc994d5904849}
+
+
+コンストラクタ, 名前空間とinfocallbackのスタンバイ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & node\-Handleのポインタ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMyVrep_a8061008dfc3351fdafe0fb3358fb9388}{\index{My\-Vrep@{My\-Vrep}!Enable\-Publisher@{Enable\-Publisher}}
+\index{Enable\-Publisher@{Enable\-Publisher}!MyVrep@{My\-Vrep}}
+\subsubsection[{Enable\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Enable\-Publisher (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{topic\-Name, }
+\item[{int}]{queue\-Size, }
+\item[{int}]{stream\-Cmd, }
+\item[{int}]{aux\-Int1, }
+\item[{int}]{aux\-Int2, }
+\item[{std\-::string}]{aux\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a8061008dfc3351fdafe0fb3358fb9388}
+
+
+Vrep上のオブジェクトに対し, Publisherを要求する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic\-Name} & Publishするときのtopic \\
+\hline
+{\em queue\-Size} & queueサイズ \\
+\hline
+{\em stream\-Cmd} & stream\-Cmd \\
+\hline
+{\em aux\-Int1} & aux\-Int1(stream\-Cmd参照) \\
+\hline
+{\em aux\-Int2} & aux\-Int2(stream\-Cmd参照) \\
+\hline
+{\em aux\-String} & aux\-String(stream\-Cmd参照)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 成功 \\
+\hline
+{\em false} & 失敗 \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_a734773fc7f7d689c40b5b37c52b3a6fd}{\index{My\-Vrep@{My\-Vrep}!Enable\-Subscriber@{Enable\-Subscriber}}
+\index{Enable\-Subscriber@{Enable\-Subscriber}!MyVrep@{My\-Vrep}}
+\subsubsection[{Enable\-Subscriber}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Enable\-Subscriber (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{topic\-Name, }
+\item[{int}]{queue\-Size, }
+\item[{int}]{stream\-Cmd, }
+\item[{int}]{aux\-Int1, }
+\item[{int}]{aux\-Int2, }
+\item[{std\-::string}]{aux\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a734773fc7f7d689c40b5b37c52b3a6fd}
+
+
+Subscriberを要求する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic\-Name} & 要求するtopicの名前 \\
+\hline
+{\em queue\-Size} & queueのサイズ \\
+\hline
+{\em stream\-Cmd} & stream\-Cmd \\
+\hline
+{\em aux\-Int1(stream\-Cmd参照)} & \\
+\hline
+{\em aux\-Int2(stream\-Cmd参照)} & \\
+\hline
+{\em aux\-String(stream\-Cmd参照)} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 成功 \\
+\hline
+{\em false} & 失敗 \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_a0c2040190b0326acba9ef14ce74a5d6f}{\index{My\-Vrep@{My\-Vrep}!Get\-Object\-Handle@{Get\-Object\-Handle}}
+\index{Get\-Object\-Handle@{Get\-Object\-Handle}!MyVrep@{My\-Vrep}}
+\subsubsection[{Get\-Object\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}int My\-Vrep\-::\-Get\-Object\-Handle (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{object\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a0c2040190b0326acba9ef14ce74a5d6f}
+
+
+Objectの\-Handleを取得する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\-Name} & 取得するオブジェクトの名前\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+取得したオブジェクト 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/1} & オブジェクトのハンドル取得に失敗 \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_a301856627257f56ea4dc62f40cd53505}{\index{My\-Vrep@{My\-Vrep}!Get\-Time@{Get\-Time}}
+\index{Get\-Time@{Get\-Time}!MyVrep@{My\-Vrep}}
+\subsubsection[{Get\-Time}]{\setlength{\rightskip}{0pt plus 5cm}float My\-Vrep\-::\-Get\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a301856627257f56ea4dc62f40cd53505}
+
+
+取得した時間を返す 
+
+\begin{DoxyReturn}{Returns}
+Vrep上での時間 
+\end{DoxyReturn}
+\hypertarget{classMyVrep_a24aa7c4b24ff512a366b0a0cdacdc867}{\index{My\-Vrep@{My\-Vrep}!Is\-Run@{Is\-Run}}
+\index{Is\-Run@{Is\-Run}!MyVrep@{My\-Vrep}}
+\subsubsection[{Is\-Run}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Is\-Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a24aa7c4b24ff512a366b0a0cdacdc867}
+
+
+Vrepがいま動いているかどうかを返す 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & Vrepがいま動いている \\
+\hline
+{\em false} & Vrepがいま止まっている \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_a0f2e523e6a68bde936c224b83d60af66}{\index{My\-Vrep@{My\-Vrep}!Load\-Model@{Load\-Model}}
+\index{Load\-Model@{Load\-Model}!MyVrep@{My\-Vrep}}
+\subsubsection[{Load\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Vrep\-::\-Load\-Model (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a0f2e523e6a68bde936c224b83d60af66}
+
+
+Modelを読み込む 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & 読み込むファイル(.ttm) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMyVrep_add24917b44a09b75496d76d8cda107af}{\index{My\-Vrep@{My\-Vrep}!Remove\-Model@{Remove\-Model}}
+\index{Remove\-Model@{Remove\-Model}!MyVrep@{My\-Vrep}}
+\subsubsection[{Remove\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Vrep\-::\-Remove\-Model (
+\begin{DoxyParamCaption}
+\item[{int}]{handle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_add24917b44a09b75496d76d8cda107af}
+
+
+Modelを除去する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & 除去する\-Modelのハンドル \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMyVrep_ae9f091cd4ea81eb42d564ccb3de6d034}{\index{My\-Vrep@{My\-Vrep}!Remove\-Model@{Remove\-Model}}
+\index{Remove\-Model@{Remove\-Model}!MyVrep@{My\-Vrep}}
+\subsubsection[{Remove\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Vrep\-::\-Remove\-Model (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{model\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_ae9f091cd4ea81eb42d564ccb3de6d034}
+
+
+Modelを除去する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\-Name} & 除去する\-Modelの名前 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{myvrep_8h}{myvrep.\-h}\end{DoxyCompactItemize}
