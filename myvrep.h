@@ -17,6 +17,8 @@
 #include <vrep_common/simRosStopSimulation.h>
 #include <vrep_common/simRosEnablePublisher.h>
 #include <vrep_common/simRosEnableSubscriber.h>
+#include <vrep_common/simRosSetJointTargetVelocity.h>
+#include <vrep_common/simRosSetJointTargetPosition.h>
 
 class MyVrep
 {
@@ -169,8 +171,38 @@ class MyVrep
 			if(!client.call(s) || (s.response.subscriberID == -1)) return false;
 			return true;
 		}
+
+		/**
+		 * @brief Jointの速度を設定する
+		 *
+		 * @param handle Jointのハンドル
+		 * @param value 設定する速度
+		 *
+		 * @retval true 成功
+		 * @retval false 失敗
+		 */
+		bool SetJointTargetVelocity(int handle, float value){
+			ros::ServiceClient client = m_node->serviceClient<vrep_common::simRosSetJointTargetVelocity>(m_ns+"/vrep/simRosSetJointTargetVelocity");
+			vrep_common::simRosSetJointTargetVelocity s;
+			s.request.handle = handle;
+			s.request.targetVelocity = value;
+
+			if(!client.call(s) || (s.response.result == -1)) return false;
+			return true;
+		}
+
+		/**
+		 * @brief Jointの速度を設定する　
+		 *
+		 * @param objectName Jointの名前
+		 * @param value 設定する速度
+		 *
+		 * @retval true 成功
+		 * @retval false 失敗
+		 */
+		bool SetJointTargetVelocity(std::string objectName, float value){
+			return SetJointTargetVelocity(objectName, value);
+		}
 };
-
-
 
 #endif

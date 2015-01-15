@@ -154,7 +154,7 @@ class MyPublisher
 		 * @param topicName topicの名前
 		 * @param queue_size queueのサイズ
 		 */
-		MyPublisher(ros::NodeHandle *node, std::string topicName, int queue_size=1):m_pub(node->advertise<T>(topicName,1)){}
+		MyPublisher(ros::NodeHandle *node, std::string topicName, int queue_size=1):m_topicName(topicName),m_pub(node->advertise<T>(topicName,1)){}
 
 
 		/**
@@ -189,3 +189,4 @@ class MyPublisher
 		void operator << (U value){Push(value);}
 };
 #endif /* MYROS_H */
+

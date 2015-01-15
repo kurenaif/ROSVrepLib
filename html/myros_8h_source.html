@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        std::string m_topicName;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classMyPublisher.html#a3ce5354492470a4f3147d52826014815">  157</a></span>&#160;        <a class="code" href="classMyPublisher.html#a3ce5354492470a4f3147d52826014815">MyPublisher</a>(ros::NodeHandle *node, std::string topicName, <span class="keywordtype">int</span> queue_size=1):m_pub(node-&gt;advertise&lt;T&gt;(topicName,1)){}</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classMyPublisher.html#a3ce5354492470a4f3147d52826014815">  157</a></span>&#160;        <a class="code" href="classMyPublisher.html#a3ce5354492470a4f3147d52826014815">MyPublisher</a>(ros::NodeHandle *node, std::string topicName, <span class="keywordtype">int</span> queue_size=1):m_topicName(topicName),m_pub(node-&gt;advertise&lt;T&gt;(topicName,1)){}</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> U&gt;</div>
@@ -184,6 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classMyPublisher.html#a8b0d70721eb56b66cc00ce7bd192e76c">  189</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMyPublisher.html#a8b0d70721eb56b66cc00ce7bd192e76c">operator &lt;&lt; </a>(U value){<a class="code" href="classMyPublisher.html#a429cb336dc3423784854cf5b8bb10883">Push</a>(value);}</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MYROS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor"></span></div>
 <div class="ttc" id="classMySubscriber_html_ab6fa45cf088da2b7b47530d49d203ccb"><div class="ttname"><a href="classMySubscriber.html#ab6fa45cf088da2b7b47530d49d203ccb">MySubscriber::IsNew</a></div><div class="ttdeci">bool IsNew()</div><div class="ttdoc">前回のGet()から更新があったかどうか </div><div class="ttdef"><b>Definition:</b> myros.h:131</div></div>
 <div class="ttc" id="classMyPublisher_html_a429cb336dc3423784854cf5b8bb10883"><div class="ttname"><a href="classMyPublisher.html#a429cb336dc3423784854cf5b8bb10883">MyPublisher::Push</a></div><div class="ttdeci">void Push(U value)</div><div class="ttdoc">値をpublishする </div><div class="ttdef"><b>Definition:</b> myros.h:167</div></div>
 <div class="ttc" id="classMyPublisher_html"><div class="ttname"><a href="classMyPublisher.html">MyPublisher</a></div><div class="ttdoc">Publisherオブジェクト </div><div class="ttdef"><b>Definition:</b> myros.h:143</div></div>
@@ -202,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 17 2014 17:00:39 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 15 2015 15:04:54 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
