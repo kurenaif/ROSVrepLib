@@ -203,6 +203,37 @@ class MyVrep
 		bool SetJointTargetVelocity(std::string objectName, float value){
 			return SetJointTargetVelocity(objectName, value);
 		}
+
+		/**
+		 * @brief Jointの位置を設定する(要:Control loop enabled)
+		 *
+		 * @param handle jointのハンドル
+		 * @param value jointの位置
+		 *
+		 * @retval true 成功
+		 * @retval false 失敗
+		 */
+		bool SetJointTargetPosition(int handle, float value){
+			ros::ServiceClient client = m_node->serviceClient<vrep_common::simRosSetJointTargetPosition>(m_ns+"/vrep/simRosSetJointTargetPosition");
+			vrep_common::simRosSetJointTargetPosition s;
+			s.request.handle = handle;
+			s.request.targetPosition = value;
+
+			if(!client.call(s) || (s.response.result == -1)) return false;
+			return true;
+		}
+
+		
+		/**
+		 * @brief Jointの位置を設定する(要:Contorol loop enabled)
+		 *
+		 * @param objectName jointの名前
+		 * @param value jointの位置
+		 *
+		 * @retval true 成功
+		 * @retval false 失敗
+		 */
+		bool SetJointTargetPosition(std::string objectName, float value){SetJointTargetPosition(GetObjectHandle(objectName), value);}
 };
 
 #endif

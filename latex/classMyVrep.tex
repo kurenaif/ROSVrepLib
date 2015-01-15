@@ -27,7 +27,15 @@ void \hyperlink{classMyVrep_ae9f091cd4ea81eb42d564ccb3de6d034}{Remove\-Model} (s
 bool \hyperlink{classMyVrep_a8061008dfc3351fdafe0fb3358fb9388}{Enable\-Publisher} (std\-::string topic\-Name, int queue\-Size, int stream\-Cmd, int aux\-Int1, int aux\-Int2, std\-::string aux\-String)
 \begin{DoxyCompactList}\small\item\em Vrep上のオブジェクトに対し, Publisherを要求する \end{DoxyCompactList}\item 
 bool \hyperlink{classMyVrep_a734773fc7f7d689c40b5b37c52b3a6fd}{Enable\-Subscriber} (std\-::string topic\-Name, int queue\-Size, int stream\-Cmd, int aux\-Int1, int aux\-Int2, std\-::string aux\-String)
-\begin{DoxyCompactList}\small\item\em Subscriberを要求する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Subscriberを要求する \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_a9e1258779476a3a542c645bc459f15e8}{Set\-Joint\-Target\-Velocity} (int handle, float value)
+\begin{DoxyCompactList}\small\item\em Jointの速度を設定する \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_aca1cfd8c74c214136c5a702e99f06ec9}{Set\-Joint\-Target\-Velocity} (std\-::string object\-Name, float value)
+\begin{DoxyCompactList}\small\item\em Jointの速度を設定する　 \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_a6da9c0dcdcfad80b1a1d0ef52a20ca7a}{Set\-Joint\-Target\-Position} (int handle, float value)
+\begin{DoxyCompactList}\small\item\em Jointの位置を設定する(要\-:Control loop enabled) \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVrep_aa3d6f6c9c133363f665af16932329ed6}{Set\-Joint\-Target\-Position} (std\-::string object\-Name, float value)
+\begin{DoxyCompactList}\small\item\em Jointの位置を設定する(要\-:Contorol loop enabled) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -230,6 +238,110 @@ Modelを除去する
 {\em model\-Name} & 除去する\-Modelの名前 \\
 \hline
 \end{DoxyParams}
+\hypertarget{classMyVrep_a6da9c0dcdcfad80b1a1d0ef52a20ca7a}{\index{My\-Vrep@{My\-Vrep}!Set\-Joint\-Target\-Position@{Set\-Joint\-Target\-Position}}
+\index{Set\-Joint\-Target\-Position@{Set\-Joint\-Target\-Position}!MyVrep@{My\-Vrep}}
+\subsubsection[{Set\-Joint\-Target\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Set\-Joint\-Target\-Position (
+\begin{DoxyParamCaption}
+\item[{int}]{handle, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a6da9c0dcdcfad80b1a1d0ef52a20ca7a}
+
+
+Jointの位置を設定する(要\-:Control loop enabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & jointのハンドル \\
+\hline
+{\em value} & jointの位置\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 成功 \\
+\hline
+{\em false} & 失敗 \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_aa3d6f6c9c133363f665af16932329ed6}{\index{My\-Vrep@{My\-Vrep}!Set\-Joint\-Target\-Position@{Set\-Joint\-Target\-Position}}
+\index{Set\-Joint\-Target\-Position@{Set\-Joint\-Target\-Position}!MyVrep@{My\-Vrep}}
+\subsubsection[{Set\-Joint\-Target\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Set\-Joint\-Target\-Position (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{object\-Name, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_aa3d6f6c9c133363f665af16932329ed6}
+
+
+Jointの位置を設定する(要\-:Contorol loop enabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\-Name} & jointの名前 \\
+\hline
+{\em value} & jointの位置\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 成功 \\
+\hline
+{\em false} & 失敗 \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_a9e1258779476a3a542c645bc459f15e8}{\index{My\-Vrep@{My\-Vrep}!Set\-Joint\-Target\-Velocity@{Set\-Joint\-Target\-Velocity}}
+\index{Set\-Joint\-Target\-Velocity@{Set\-Joint\-Target\-Velocity}!MyVrep@{My\-Vrep}}
+\subsubsection[{Set\-Joint\-Target\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Set\-Joint\-Target\-Velocity (
+\begin{DoxyParamCaption}
+\item[{int}]{handle, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_a9e1258779476a3a542c645bc459f15e8}
+
+
+Jointの速度を設定する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Jointのハンドル \\
+\hline
+{\em value} & 設定する速度\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 成功 \\
+\hline
+{\em false} & 失敗 \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classMyVrep_aca1cfd8c74c214136c5a702e99f06ec9}{\index{My\-Vrep@{My\-Vrep}!Set\-Joint\-Target\-Velocity@{Set\-Joint\-Target\-Velocity}}
+\index{Set\-Joint\-Target\-Velocity@{Set\-Joint\-Target\-Velocity}!MyVrep@{My\-Vrep}}
+\subsubsection[{Set\-Joint\-Target\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Vrep\-::\-Set\-Joint\-Target\-Velocity (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{object\-Name, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMyVrep_aca1cfd8c74c214136c5a702e99f06ec9}
+
+
+Jointの速度を設定する　 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\-Name} & Jointの名前 \\
+\hline
+{\em value} & 設定する速度\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & 成功 \\
+\hline
+{\em false} & 失敗 \\
+\hline
+\end{DoxyRetVals}
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}

@@ -37,7 +37,7 @@ int main(int argc, char** argv)
 		//時間を取得して標準出力
 		std::cout << myVrep.GetTime() << std::endl;
 		//motorに値を出力する.
-		myVrep.SetJointTargetVelocity("motor", i);
+		std::cout << myVrep.SetJointTargetPosition("motor", i) << std::endl;
 		i = std::sin(myVrep.GetTime());
 	}
 	return 0;
