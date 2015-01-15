@@ -19,6 +19,8 @@
 #include <vrep_common/simRosEnableSubscriber.h>
 #include <vrep_common/simRosSetJointTargetVelocity.h>
 #include <vrep_common/simRosSetJointTargetPosition.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <vrep_common/simRosGetObjectPose.h>
 
 class MyVrep
 {
@@ -201,7 +203,7 @@ class MyVrep
 		 * @retval false 失敗
 		 */
 		bool SetJointTargetVelocity(std::string objectName, float value){
-			return SetJointTargetVelocity(objectName, value);
+			return SetJointTargetVelocity(GetObjectHandle(objectName), value);
 		}
 
 		/**
@@ -233,7 +235,25 @@ class MyVrep
 		 * @retval true 成功
 		 * @retval false 失敗
 		 */
-		bool SetJointTargetPosition(std::string objectName, float value){SetJointTargetPosition(GetObjectHandle(objectName), value);}
+		bool SetJointTargetPosition(std::string objectName, float value){return SetJointTargetPosition(GetObjectHandle(objectName), value);}
+
+		/**
+		 * @brief Objctの位置と角度を取得する
+		 *
+		 * @param handle 取得するオブジェクトのhandle
+		 * @param relativeToObjectHandle 座標を決めるときの基準点(指定がない場合は絶対座標)
+		 *
+		 * @return Objectの位置と角度
+		 */
+		geometry_msgs::Pose GetObjectPose(int handle, int relativeToObjectHandle = -1){
+			ros::ServiceClient client = m_node->serviceClient<vrep_common::simRosGetObjectPose>(m_ns+"/vrep/simRosGetObjectPose");
+			vrep_common::simRosGetObjectPose s;
+			s.request.handle = handle;
+			s.request.relativeToObjectHandle = relativeToObjectHandle;
+
+			if(!client.call(s) || (s.response.result == -1)) return s.response.pose.pose;
+			return s.response.pose.pose;
+		}
 };
 
 #endif
