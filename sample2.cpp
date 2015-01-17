@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 	MyVrep myVrep(ros.GetNodeHandlePointer());
 
 	//modelの読み込み [ToDo]必ずモデルのパスに合わせてここの行を変えてください.
-	// myVrep.LoadModel("/home/shimizu/vrep/models/vehicles/helicopter.ttm");
+	myVrep.LoadModel("/home/shimizu/vrep/models/vehicles/helicopter.ttm");
 
 	//Vrepのシミュレーションを実行させる.
 	myVrep.Start();

@@ -13,19 +13,12 @@ int main(int argc, char** argv)
 
 	// MyPublisher<std_msgs::Int64> pub(ros.GetNodeHandlePointer(), "MyPublish");
 	// MySubscriber<std_msgs::Int64> sub(ros.GetNodeHandlePointer(), "MyPublish");
-	MyVrep myVrep(ros.GetNodeHandlePointer());
-
-	myVrep.LoadModel("/home/shimizu/vrep/models/vehicles/helicopter.ttm");
-
-	MyPublisher<std_msgs::Float64> pub(ros.GetNodeHandlePointer(), "motor");
-	myVrep.EnableSubscriber(pub.GetTopicName(), 1, simros_strmcmd_set_joint_force, myVrep.GetObjectHandle("motor"), -1, "");
 
 	myVrep.Start();
 
 	float i=0;
 	while(ros.Run())
 	{
-
 		int a;
 		// std::cout << a << std::endl;
 		std::cout << myVrep.GetTime() << std::endl;

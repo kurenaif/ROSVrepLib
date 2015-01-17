@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>My Project: MyVrep Class Reference</title>
+<title>Vrep-ROS Library: MyVrep Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Vrep-ROS Library
    </div>
   </td>
  </tr>
@@ -138,6 +138,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aa3d6f6c9c133363f665af16932329ed6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMyVrep.html#aa3d6f6c9c133363f665af16932329ed6">SetJointTargetPosition</a> (std::string objectName, float value)</td></tr>
 <tr class="memdesc:aa3d6f6c9c133363f665af16932329ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jointの位置を設定する(要:Contorol loop enabled)  <a href="#aa3d6f6c9c133363f665af16932329ed6">More...</a><br/></td></tr>
 <tr class="separator:aa3d6f6c9c133363f665af16932329ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab562960cc98559ecfd39552240881d55"><td class="memItemLeft" align="right" valign="top">geometry_msgs::Pose&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMyVrep.html#ab562960cc98559ecfd39552240881d55">GetObjectPose</a> (int handle, int relativeToObjectHandle=-1)</td></tr>
+<tr class="memdesc:ab562960cc98559ecfd39552240881d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objctの位置と角度を取得する  <a href="#ab562960cc98559ecfd39552240881d55">More...</a><br/></td></tr>
+<tr class="separator:ab562960cc98559ecfd39552240881d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad04ad612d83dea285cfcc994d5904849"></a>
@@ -365,6 +368,50 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ab562960cc98559ecfd39552240881d55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::Pose MyVrep::GetObjectPose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>relativeToObjectHandle</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Objctの位置と角度を取得する </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>取得するオブジェクトのhandle </td></tr>
+    <tr><td class="paramname">relativeToObjectHandle</td><td>座標を決めるときの基準点(指定がない場合は絶対座標)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Objectの位置と角度 </dd></dl>
 
 </div>
 </div>
@@ -728,7 +775,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 15 2015 15:26:02 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 17 2015 12:50:36 for Vrep-ROS Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
